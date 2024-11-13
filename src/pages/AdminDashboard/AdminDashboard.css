@@ -1,0 +1,22 @@
+.dashboard{
+    display: flex;
+    & aside{
+        width: 270px;
+        height: 100vh;
+        position: fixed;
+        background-color: blue;
+        top: 0;
+    }
+    & main{
+        margin-left: 270px;
+        flex: 1;
+        background-color: red;
+        & header{
+            height: 72px;
+            background-color: yellow;
+        }
+        & .main-dashboard{
+            height: 1772px;
+        }
+    }
+}
