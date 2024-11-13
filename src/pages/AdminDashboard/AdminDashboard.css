@@ -1,22 +1,103 @@
-.dashboard{
+.dashboard {
+  display: flex;
+  & aside {
+    width: 270px;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    top: 0;
     display: flex;
-    & aside{
-        width: 270px;
-        height: 100vh;
-        position: fixed;
-        background-color: blue;
-        top: 0;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 0px 5px 0px #1111111a;
+    gap: 15px;
+    & .logo {
+      height: 72px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 0.5px solid #111111;
     }
-    & main{
-        margin-left: 270px;
-        flex: 1;
-        background-color: red;
-        & header{
-            height: 72px;
-            background-color: yellow;
-        }
-        & .main-dashboard{
-            height: 1772px;
-        }
+  }
+  & .nav-button {
+    width: 240px;
+    height: 40px;
+    padding: 10px 30px 10px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    user-select: none;
+    & .nav-button-icon {
+      fill: black;
     }
+    &.active {
+      background-color: #4a90e2;
+      color: white;
+      & .nav-button-icon {
+        fill: white;
+      }
+    }
+  }
+  & main {
+    margin-left: 270px;
+    flex: 1;
+    background-color: #f9f9f9;
+    & header {
+      height: 72px;
+      background-color: white;
+      box-shadow: 0px 1px 5px 0px #1111111a;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding-right: 30px;
+    }
+    & .user-detail {
+      height: 32px;
+      width: 336px;
+      gap: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    & .notification {
+      position: relative;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        background-color: #4a90e2;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-align: center;
+        color: white;
+      }
+    }
+    & .user-image-name {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      & img {
+        width: 32px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+    }
+    & .logout {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+    }
+    & .main-dashboard {
+      height: 1772px;
+    }
+  }
 }
