@@ -98,6 +98,8 @@
     }
     & .main-dashboard {
       height: 1772px;
+      padding: 30px;
+      gap: 30px;
     }
   }
 }

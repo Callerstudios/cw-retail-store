@@ -1,0 +1,81 @@
+.dashboard-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  & .dashboard-head {
+    height: 29px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+  }
+  & .filter {
+    width: 654px;
+    height: 40px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  & .tabs {
+    width: 394px;
+    height: 40px;
+    padding: 5px;
+    gap: 0px;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+  }
+  & .tab {
+    text-wrap: nowrap;
+    text-align: center;
+    width: 86px;
+    height: 30px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    &.active {
+      background-color: #4a90e2;
+      color: white;
+    }
+  }
+  & .date, .store-type {
+    width: 120px;
+    position: relative;
+    height: 40px;
+    padding: 10px 14px 10px 14px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    background-color: white;
+    border: 1px solid #ededed;
+    outline: none;
+    text-wrap: nowrap;
+    font-size: 14px;
+    cursor: pointer;
+    & input{
+        position: absolute;
+        inset: 0;
+        /* background-color: transparent; */
+        cursor: pointer;
+        outline: none;
+        width: 15px;
+        top: 0;
+        left: 100%;
+        transform: translateX(-20px);
+        user-select: none;
+        &::-webkit-datetime-edit {
+            color: transparent;
+          }
+          border: none;
+    }
+  }
+  & .stats1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
