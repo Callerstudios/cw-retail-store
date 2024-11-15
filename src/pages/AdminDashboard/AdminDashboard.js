@@ -19,7 +19,78 @@ function AdminDashboard() {
   const [notificationCount, setNotificationCount] = useState(2);
   return (
     <div className="dashboard">
-      
+      <aside>
+        <div className="logo">
+          <CompanyLogo />
+        </div>
+        <div
+          className={
+            currentPageIndex === 0 ? "nav-button active" : "nav-button"
+          }
+          onClick={() => setCurrentPageIndex(0)}
+        >
+          <DashboardIcon className="nav-button-icon" />
+          <p>Dashboard</p>
+        </div>
+        <div
+          className={
+            currentPageIndex === 1 ? "nav-button active" : "nav-button"
+          }
+          onClick={() => setCurrentPageIndex(1)}
+        >
+          <CartIcon className="nav-button-icon" />
+          <p>Orders</p>
+        </div>
+        <div
+          className={
+            currentPageIndex === 2 ? "nav-button active" : "nav-button"
+          }
+          onClick={() => setCurrentPageIndex(2)}
+        >
+          <ProductIcon className="nav-button-icon" />
+          <p>Products</p>
+        </div>
+        <div
+          className={
+            currentPageIndex === 3 ? "nav-button active" : "nav-button"
+          }
+          onClick={() => setCurrentPageIndex(3)}
+        >
+          <CustomerIcon className="nav-button-icon" />
+          <p>Customers</p>
+        </div>
+      </aside>
+      <main>
+        <header>
+          <div className="user-detail">
+            <div className="notification">
+              <span>{notificationCount}</span>
+              <NotificationIcon />
+            </div>
+            <div className="user-image-name">
+              <img src={userDetails.imageUrl} alt="" />
+              <p>{userDetails.username}</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            </div>
+            <div className="logout">
+              <LogoutIcon />
+              <p>Logout</p>
+            </div>
+          </div>
+        </header>
+        <section className="main-dashboard">
+            <DashboardTab name={userDetails.username}/>
+            
+        </section>
+      </main>
     </div>
   );
 }
