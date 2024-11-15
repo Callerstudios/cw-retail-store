@@ -29,7 +29,7 @@ function AdminDashboard() {
           }
           onClick={() => setCurrentPageIndex(0)}
         >
-          <DashboardIcon class="nav-button-icon" />
+          <DashboardIcon className="nav-button-icon" />
           <p>Dashboard</p>
         </div>
         <div
@@ -38,7 +38,7 @@ function AdminDashboard() {
           }
           onClick={() => setCurrentPageIndex(1)}
         >
-          <CartIcon class="nav-button-icon" />
+          <CartIcon className="nav-button-icon" />
           <p>Orders</p>
         </div>
         <div
@@ -47,7 +47,7 @@ function AdminDashboard() {
           }
           onClick={() => setCurrentPageIndex(2)}
         >
-          <ProductIcon class="nav-button-icon" />
+          <ProductIcon className="nav-button-icon" />
           <p>Products</p>
         </div>
         <div
@@ -56,7 +56,7 @@ function AdminDashboard() {
           }
           onClick={() => setCurrentPageIndex(3)}
         >
-          <CustomerIcon class="nav-button-icon" />
+          <CustomerIcon className="nav-button-icon" />
           <p>Customers</p>
         </div>
       </aside>

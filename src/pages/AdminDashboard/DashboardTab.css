@@ -42,7 +42,8 @@
       color: white;
     }
   }
-  & .date, .store-type {
+  & .date,
+  .store-type {
     width: 120px;
     position: relative;
     height: 40px;
@@ -56,26 +57,36 @@
     text-wrap: nowrap;
     font-size: 14px;
     cursor: pointer;
-    & input{
-        position: absolute;
-        inset: 0;
-        /* background-color: transparent; */
-        cursor: pointer;
-        outline: none;
-        width: 15px;
-        top: 0;
-        left: 100%;
-        transform: translateX(-20px);
-        user-select: none;
-        &::-webkit-datetime-edit {
-            color: transparent;
-          }
-          border: none;
+    & input {
+      position: absolute;
+      inset: 0;
+      /* background-color: transparent; */
+      cursor: pointer;
+      outline: none;
+      width: 15px;
+      top: 0;
+      left: 100%;
+      transform: translateX(-20px);
+      user-select: none;
+      &::-webkit-datetime-edit {
+        color: transparent;
+      }
+      border: none;
     }
   }
-  & .stats1{
+  & .stats1 {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+  }
+  & .stats2 {
+    height: 59px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  & .sales-chart{
+    height: 455px;
+    /* background-color: red; */
   }
 }

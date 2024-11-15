@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./DashboardTab.css";
 import StatView from "../../components/StatView";
+import DetailBox from "../../components/DetailBox";
+import SalesChart from "../../components/SalesChart";
 
 function DashboardTab(props) {
   const [storeTypes, setStoreTypes] = useState(["Store 1", "Store 2"]);
   const [filterDurationIndex, setFilterDurationIndex] = useState(0);
-  const [stat1Data, setstat1Data] = useState([
+  const [stat1Data, setStat1Data] = useState([
     {
       title: "Total Sales Amount",
-      price: "₦ 12,000,000",
+      price: "₦ 11,000,000",
       percent: 15,
     },
     {
@@ -88,6 +90,21 @@ function DashboardTab(props) {
             percent={stat.percent}
           />
         ))}
+      </div>
+      <div className="stats2">
+        <DetailBox name="Total Orders" number={247}/>
+        <DetailBox name="Pending Orders" number={33}/>
+        <DetailBox name="Confirmed Orders" number={25}/>
+        <DetailBox name="Delivered Orders" number={41}/>
+      </div>
+      <div className="stats2">
+        <DetailBox name="Returned Orders" number={33}/>
+        <DetailBox name="Delayed Orders" number={25}/>
+        <DetailBox name="Cancelled Orders" number={7}/>
+        <DetailBox name="Total Offline Orders" number={23}/>
+      </div>
+      <div className="sales-chart">
+        <SalesChart/>
       </div>
     </div>
   );
