@@ -7,10 +7,11 @@ import { ReactComponent as ProductIcon } from "../../images/icons/package.svg";
 import { ReactComponent as CustomerIcon } from "../../images/icons/customer.svg";
 import { ReactComponent as NotificationIcon } from "../../images/icons/notification.svg";
 import { ReactComponent as LogoutIcon } from "../../images/icons/logout.svg";
-import DashboardTab from "./DashboardTab";
+import DashboardTab from "./Dashboard/DashboardTab";
+import OrderTab from "./Order/OrderTab";
 
 function AdminDashboard() {
-  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const [currentPageIndex, setCurrentPageIndex] = useState(1);
   const [userDetails, setUserDetails] = useState({
     username: "Tunde Bakare",
     imageUrl:
@@ -87,8 +88,12 @@ function AdminDashboard() {
           </div>
         </header>
         <section className="main-dashboard">
-            <DashboardTab name={userDetails.username}/>
-            
+          {currentPageIndex === 0 && (
+            <DashboardTab name={userDetails.username} />
+          )}
+          {currentPageIndex === 1 && (
+            <OrderTab/>
+          )}
         </section>
       </main>
     </div>

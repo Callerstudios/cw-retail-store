@@ -96,9 +96,7 @@
       align-items: center;
       gap: 5px;
     }
-    & .main-dashboard {
-      height: 1772px;
-      padding: 30px;
+    & .main-dashboard {      
       gap: 30px;
     }
   }

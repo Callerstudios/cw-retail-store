@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 30px;
+  height: 1772px;
   & .dashboard-head {
     height: 29px;
     font-size: 24px;
@@ -58,19 +60,7 @@
     font-size: 14px;
     cursor: pointer;
     & input {
-      position: absolute;
-      inset: 0;
-      /* background-color: transparent; */
-      cursor: pointer;
-      outline: none;
-      width: 15px;
-      top: 0;
-      left: 100%;
-      transform: translateX(-20px);
-      user-select: none;
-      &::-webkit-datetime-edit {
-        color: transparent;
-      }
+      width: 0;
       border: none;
     }
   }
@@ -85,8 +75,34 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  & .sales-chart{
+  & .sales-chart {
     height: 455px;
-    /* background-color: red; */
+  }
+  & .stats3,
+  .stats4 {
+    height: 351.72px;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+  & .retention-rate {
+    width: 310px;
+    height: 368px;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ededed;
+    background-color: white;
+    & .top {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      height: 29px;
+      justify-content: center;
+      & hr {
+        width: 100%;
+      }
+    }
   }
 }

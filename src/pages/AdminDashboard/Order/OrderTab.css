@@ -1,0 +1,137 @@
+.order {
+  height: 952px;
+  /* background-color: green; */
+  padding: 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  & .header {
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & > p {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    & .header-right {
+      width: 288px;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    & .sync {
+      width: 182px;
+    }
+    & .export {
+      width: 96px;
+    }
+    & .export,
+    .sync {
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      gap: 8px;
+      border-radius: 8px;
+      border: 1px solid #4a90e2;
+      color: #4b4efc;
+      cursor: pointer;
+      & svg {
+        fill: #4b4efc;
+      }
+    }
+    & .export{
+      background-color: #4b4efc;
+      color: white;
+      & svg {
+        fill: white;
+      }
+    }
+  }
+  & .filter {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & .filter-form {
+      width: 380px;
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+    }
+    & .search {
+      width: 300px;
+      background-color: white;
+      height: 40px;
+      padding: 8px 12px 8px 12px;
+      gap: 4px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 8px;
+      border: 1px;
+      & input {
+        border: none;
+        outline: none;
+        flex: 1;
+      }
+    }
+    & select {
+      width: 120px;
+      border-radius: 8px;
+      gap: 8px;
+      border: none;
+      outline: none;
+    }
+    & .date {
+      width: 120px;
+      position: relative;
+      & input {
+        width: 0;
+        border: none;
+      }
+      & .label {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        inset: 0;
+        border-radius: 8px;
+        gap: 8px;
+      }
+    }
+  }
+  & .table {
+    height: 730px;
+    & .vert {
+      width: 30px;
+    }
+    & .row {
+      height: 60px;
+      padding: 15px 20px 15px 20px;
+      gap: 10px;
+      border: none;
+      display: flex;
+      /* justify-content: space-between; */
+      background-color: white;
+      border-bottom: 1px solid #ededed;
+      font-size: 14px;
+      & > p {
+        max-width: 150px;
+        min-width: 150px;
+      }
+    }
+    & .head {
+      font-size: 16px;
+      height: 70px;
+      background-color: white;
+      padding: 20px;
+      gap: 10px;
+      border-radius: 10px 10px 0px 0px;
+    }
+  }
+}
