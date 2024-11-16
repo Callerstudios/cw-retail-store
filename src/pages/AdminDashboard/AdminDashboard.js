@@ -11,7 +11,7 @@ import DashboardTab from "./Dashboard/DashboardTab";
 import OrderTab from "./Order/OrderTab";
 
 function AdminDashboard() {
-  const [currentPageIndex, setCurrentPageIndex] = useState(1);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [userDetails, setUserDetails] = useState({
     username: "Tunde Bakare",
     imageUrl:
