@@ -121,7 +121,71 @@ function ProductsTab() {
   ];
   return (
     <div className="products-tab">
-      
+      <div className="header">
+        <p>Orders</p>
+        <div className="header-right">
+          <span className="export">
+            <ExportIcon />
+            <p>Export</p>
+          </span>
+          <span className="add-product">
+            <AddIcon />
+            <p>Add Product</p>
+          </span>
+        </div>
+      </div>
+      <div className="filter">
+        <div className="filter-form">
+          <select>
+            <option value={1}>Category</option>
+          </select>
+          <select>
+            <option value={1}>Quantity</option>
+          </select>
+          <select>
+            <option value={1}>Status</option>
+          </select>
+        </div>
+        <div className="search">
+          <label htmlFor="search">
+            <SearchIcon />
+          </label>
+          <input id="search" placeholder="Search..." />
+        </div>
+      </div>
+      <div className="table">
+        <div className="row head">
+          <span className="name">Name</span>
+          <span>SKU</span>
+          <span>Category</span>
+          <span>Quantity</span>
+          <span>Price</span>
+          <span>Status</span>
+          <span></span>
+        </div>
+        {productsData.map((data) => (
+          <div className="row">
+            <span className="name">
+              <img src={data.image} alt="" />
+              <p>{data.name}</p>
+            </span>
+            <span>{data.sku}</span>
+            <span>{data.category}</span>
+            <span>
+              <span className="quantity" style={{ color: data.quantityColor }}>
+                {data.quantity}
+              </span>
+            </span>
+            <span>{data.price}</span>
+            <span>
+              <StatusIcon title={data.status} />
+            </span>
+            <span>
+              <MoreVertIcon />
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
