@@ -140,6 +140,7 @@
 .status-icon {
   width: 150px;
   & p {
+    color: white;
     width: fit-content;
     padding: 5px 10px 5px 10px;
     gap: 10px;

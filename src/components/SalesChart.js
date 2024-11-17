@@ -72,8 +72,8 @@ function SalesChart() {
         beginAtZero: true,
         ticks: {
           callback: function (value) {
-            if (value > 1000000) return `${value / 1000000}m`;
-            if (value > 1000) return `${value / 1000}k`;
+            if (value >= 1000000) return `${value / 1000000}m`;
+            if (value >= 1000) return `${value / 1000}k`;
             return value;
           },
         },

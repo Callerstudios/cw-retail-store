@@ -9,6 +9,8 @@ import { ReactComponent as NotificationIcon } from "../../images/icons/notificat
 import { ReactComponent as LogoutIcon } from "../../images/icons/logout.svg";
 import DashboardTab from "./Dashboard/DashboardTab";
 import OrderTab from "./Order/OrderTab";
+import ProductsTab from "./Products/ProductsTab";
+import CustomersTab from "./Customers/CustomersTab";
 
 function AdminDashboard() {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
@@ -91,9 +93,9 @@ function AdminDashboard() {
           {currentPageIndex === 0 && (
             <DashboardTab name={userDetails.username} />
           )}
-          {currentPageIndex === 1 && (
-            <OrderTab/>
-          )}
+          {currentPageIndex === 1 && <OrderTab />}
+          {currentPageIndex === 2 && <ProductsTab />}
+          {currentPageIndex === 3 && <CustomersTab />}
         </section>
       </main>
     </div>

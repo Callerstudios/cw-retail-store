@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function StatusIcon(props) {
-  const [title, setTitle] = useState("Pending");
+  // const [title, setTitle] = useState("Pending");
   const [bgColor, setBgColor] = useState("#ffcc19");
   const colors = {
     Pending: "#ffcc19",
@@ -10,10 +10,12 @@ function StatusIcon(props) {
     Delayed: "#800080",
     Completed: "#27AE60",
     Returned: "#FF7913",
+    Active: "#27AE60",
+    Inactive: "#FFCC19"
   };
 
   useEffect(() => {
-    setTitle(props.title);
+    // setTitle(props.title);
     setBgColor(colors[props.title])
   }, [props.title]);
   return (
